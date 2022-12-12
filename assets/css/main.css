@@ -1,0 +1,77 @@
+@font-face {
+  src: url("../fonts/Quicksand-VariableFont_wght.ttf");
+  font-family: "Quicksand";
+}
+#showcase-2, #showcase {
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  font-family: "Quicksand";
+}
+
+#header #openSearch ~ div, #header #openSearch ~ nav .bi-x-lg + div {
+  transition: 0.35s ease;
+}
+#header #openSearch ~ nav .bi-x-lg {
+  display: none;
+}
+#header #openSearch ~ nav .bi-x-lg + div {
+  visibility: hidden;
+  opacity: 0;
+}
+#header #openSearch:checked ~ div {
+  background-color: #bcbcbc;
+}
+#header #openSearch:checked ~ nav .bi-x-lg {
+  display: block;
+}
+#header #openSearch:checked ~ nav div > .bi-search {
+  display: none;
+}
+#header #openSearch:checked ~ nav .bi-x-lg + div {
+  visibility: visible;
+  opacity: 1;
+}
+#header .cart:hover div.d-none {
+  display: block !important;
+  min-width: 400px;
+}
+
+#showcase {
+  background-image: url("../images/showcase-1.webp");
+}
+#showcase h1 small {
+  text-shadow: 0 0 15px #e8e8e8, 0 0 15px #e8e8e8, 0 0 15px #e8e8e8;
+}
+
+#featured .w-100 .opacity-0,
+#shop .col-sm-6 .opacity-0,
+#related-products .col-sm-6 .opacity-0 {
+  transform: translate(50%, 70%);
+  transition: 0.25s ease;
+}
+#featured .w-100 .opacity-0:hover,
+#shop .col-sm-6 .opacity-0:hover,
+#related-products .col-sm-6 .opacity-0:hover {
+  background-color: #757575;
+  border-color: #757575;
+}
+#featured .w-100:hover .opacity-0,
+#shop .col-sm-6:hover .opacity-0,
+#related-products .col-sm-6:hover .opacity-0 {
+  transform: translate(50%, 50%);
+  opacity: 1 !important;
+}
+
+#showcase-2 {
+  background-image: url("../images/showcase-2.webp");
+}
+
+#tabs .active {
+  transition: 0.25s ease;
+  box-shadow: 0 2px;
+}
+
+/*# sourceMappingURL=main.css.map */

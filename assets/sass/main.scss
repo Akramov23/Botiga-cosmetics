@@ -1,0 +1,99 @@
+@font-face {
+  src: url('../fonts/Quicksand-VariableFont_wght.ttf');
+  font-family: 'Quicksand';
+}
+
+%bg-cnr {
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  font-family: 'Quicksand';
+}
+
+#header {
+
+  #openSearch {
+  
+    ~ div, ~ nav .bi-x-lg + div {
+      transition: .35s ease;
+    }
+  
+    ~ nav .bi-x-lg {
+      display: none;
+    }
+  
+    ~ nav .bi-x-lg + div {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  
+  #openSearch:checked {
+  
+    ~ div {
+      background-color: #bcbcbc;
+    }
+  
+    ~ nav .bi-x-lg {
+      display: block;
+    }
+  
+    ~ nav div > .bi-search {
+      display: none;
+    }
+  
+    ~ nav .bi-x-lg + div {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .cart:hover div.d-none {
+    display: block !important;
+    min-width:400px;
+  }
+}
+
+#showcase {
+  background-image: url('../images/showcase-1.webp');
+  @extend %bg-cnr;
+
+  h1 small {
+    text-shadow:
+    0 0 15px #e8e8e8,
+    0 0 15px #e8e8e8,
+    0 0 15px #e8e8e8;
+  }
+}
+
+#featured .w-100,
+#shop .col-sm-6,
+#related-products .col-sm-6 {
+
+  .opacity-0 {
+    transform: translate(50%, 70%);
+    transition: .25s ease;
+
+    &:hover {
+      background-color: #757575;
+      border-color: #757575;
+    }
+  }
+  
+  &:hover .opacity-0 {
+    transform: translate(50%, 50%);
+    opacity: 1 !important;
+  }
+}
+
+#showcase-2 {
+  background-image: url('../images/showcase-2.webp');
+  @extend %bg-cnr;
+}
+
+#tabs .active {
+  transition: .25s ease;
+  box-shadow: 0 2px;
+}
